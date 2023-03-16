@@ -1,9 +1,8 @@
 package com.example.kata331.service;
 
-import com.example.kata331.dao.UserDao;
+import com.example.kata331.dao.UserRepository;
 import com.example.kata331.model.User;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 
 import java.util.List;
@@ -11,9 +10,9 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final UserDao userDao;
+    private final UserRepository userDao;
 
-    public UserServiceImpl(UserDao userDao) {
+    public UserServiceImpl(UserRepository userDao) {
         this.userDao = userDao;
     }
 
